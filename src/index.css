@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Italiana&family=Italianno&display=swap');
+@import "tailwindcss";
+
+:root {
+  font-family: 'DM Sans', 'Segoe UI', sans-serif;
+  color: #fff8f5;
+  background: #090909;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  --bg: #090909;
+  --bg-soft: #111111;
+  --bg-card: #171414;
+  --rose: #c58b91;
+  --champagne: #d8b68c;
+  --text: #fff8f5;
+  --muted: #b6a5a4;
+  --border: #302528;
+  --serif: 'Italiana', Georgia, serif;
+  --script: 'Italianno', cursive;
+  --sans: 'DM Sans', 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 92px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--bg);
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: var(--sans);
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--champagne);
+  outline-offset: 3px;
+}
+
+::selection {
+  color: #090909;
+  background: var(--champagne);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
