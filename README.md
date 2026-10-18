@@ -68,6 +68,12 @@ npm run lint
 
 The production bundle is written to `dist/`. The preview server is for local production-build review; the port 5180 requirement applies to the Vite development server.
 
+## Deploy to GitHub Pages
+
+The Vite configuration sets the project-site base path to `/Anamika-s_Flowors/`. The workflow in `.github/workflows/deploy.yml` installs the locked dependencies, builds the Vite site, and deploys the `dist/` artifact when changes are pushed to `main` (or when manually dispatched).
+
+For the first deployment, open the repository's **Settings → Pages** and set **Build and deployment → Source** to **GitHub Actions**. GitHub Pages must use this workflow rather than publishing the repository root as a branch/Jekyll site; the unbuilt source HTML cannot load the React application. After pushing a change to `main`, follow the **Deploy to GitHub Pages** workflow in the **Actions** tab until both build and deploy jobs succeed.
+
 ## WhatsApp ordering
 
 Select a bouquet and quantity, then provide the required customer name and phone number and any occasion, colour, add-ons, banner, or instructions. The form calculates the bouquet subtotal and opens WhatsApp with a prefilled, URL-encoded order enquiry addressed to **+91 93220 87967**. Add-on pricing and the final total are confirmed directly with the seller. Submitting the enquiry does not itself confirm the order.

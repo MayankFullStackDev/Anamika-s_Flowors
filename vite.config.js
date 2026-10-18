@@ -4,6 +4,7 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  base: '/Anamika-s_Flowors/',
   server: {
     port: 5180,
     strictPort: true,
